@@ -1,0 +1,6 @@
+{
+  "name": "Verified Virtual Paddy",
+  "description": "Your digital buddy for free Nigerian document assistance, genuine electricity bill directory, and customer-prepared address statements.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

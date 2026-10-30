@@ -1,0 +1,147 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy: #102A43;
+  --color-navy-dark: #0A1B2C;
+  --color-navy-light: #1A3D5E;
+  --color-emerald-brand: #0D9488;
+  --color-emerald-dark: #0A736A;
+  --color-royal-blue: #2878C8;
+  --color-royal-dark: #1E62A8;
+  --color-soft-purple: #8064C2;
+  --color-warm-orange: #F59E0B;
+  --color-light-blue: #EFF6FF;
+  --color-light-green: #E8F7EF;
+  --color-main-bg: #F7F9FC;
+  --color-main-text: #172B4D;
+  --color-download-red: #DC3545;
+  --color-download-dark: #B02A37;
+}
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    overflow-x: hidden;
+    background-color: #F7F9FC;
+    color: #172B4D;
+  }
+}
+
+/* Clean, standard interactive utilities */
+.card-elevation {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.card-elevation:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.04);
+}
+
+/* Clean Button Styles */
+.btn-primary, .btn-tactile-primary {
+  transition: all 0.15s ease;
+  cursor: pointer;
+}
+
+.btn-primary:hover, .btn-tactile-primary:hover {
+  transform: translateY(-1px);
+}
+
+.btn-primary:active, .btn-tactile-primary:active {
+  transform: translateY(0);
+}
+
+.btn-secondary, .btn-tactile-secondary {
+  transition: all 0.15s ease;
+  cursor: pointer;
+}
+
+.btn-secondary:hover, .btn-tactile-secondary:hover {
+  transform: translateY(-1px);
+}
+
+.btn-secondary:active, .btn-tactile-secondary:active {
+  transform: translateY(0);
+}
+
+/* Animations */
+@keyframes pulse-subtle {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 2.5s ease-in-out infinite;
+}
+
+/* Lightweight Gentle Bounce for Download Prompt Arrow */
+@keyframes gentle-bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(6px);
+  }
+}
+
+.animate-gentle-bounce {
+  animation: gentle-bounce 1.6s ease-in-out infinite;
+}
+
+/* Non-Intrusive Toast Slide-In Animation */
+@keyframes toast-slide-in {
+  0% {
+    transform: translateY(-10px) scale(0.98);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-toast-slide-in {
+  animation: toast-slide-in 0.22s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Animated Grey to Black Header Gradient */
+@keyframes header-gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-header-gradient {
+  background: linear-gradient(135deg, #374151 0%, #1f2937 25%, #09090b 55%, #18181b 75%, #27272a 100%);
+  background-size: 240% 240%;
+  animation: header-gradient-shift 12s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card-elevation:hover {
+    transform: none !important;
+  }
+  .btn-primary:hover,
+  .btn-primary:active,
+  .btn-tactile-primary:hover,
+  .btn-tactile-primary:active {
+    transform: none !important;
+  }
+  .animate-header-gradient,
+  .animate-gentle-bounce,
+  .animate-pulse-subtle,
+  .animate-toast-slide-in {
+    animation: none !important;
+  }
+}
+
