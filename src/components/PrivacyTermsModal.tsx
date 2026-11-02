@@ -45,10 +45,10 @@ export const PrivacyTermsView: React.FC<PrivacyTermsProps> = ({ initialTab = 'te
         <div className="text-center max-w-2xl mx-auto mb-10">
           <div className="text-xs font-bold text-[#0D9488] bg-[#E8F7EF] px-3.5 py-1.5 rounded-full inline-flex items-center gap-2 border border-[#0D9488]/20 mb-3 shadow-2xs">
             <ShieldCheck className="w-3.5 h-3.5 text-[#0D9488]" />
-            <span>Civic Governance & Privacy Standards</span>
+            <span>Service Terms & Privacy Information</span>
           </div>
           <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-[#102A43] leading-tight">
-            Legal & Privacy Governance
+            Terms of Use & Privacy Information
           </h1>
           <p className="mt-3 text-sm sm:text-base text-slate-600 font-normal">
             Full transparency on client-side document processing, user responsibilities, and data privacy.
@@ -185,7 +185,7 @@ export const PrivacyTermsView: React.FC<PrivacyTermsProps> = ({ initialTab = 'te
             <div className="border-b border-gray-200 pb-4">
               <span className="text-xs font-bold text-emerald-800 uppercase tracking-wider">Privacy & Data Architecture</span>
               <h2 className="text-2xl font-bold text-slate-900 mt-1">Privacy Policy & Data Handling</h2>
-              <p className="text-xs text-slate-500 mt-1">Aligned with Nigeria Data Protection Act (NDPA) Principles</p>
+              <p className="text-xs text-slate-500 mt-1">Privacy information for users in Nigeria</p>
             </div>
 
             {/* Core Architecture Highlight */}
@@ -254,7 +254,7 @@ export const PrivacyTermsView: React.FC<PrivacyTermsProps> = ({ initialTab = 'te
 
             <section>
               <h3 className="text-base sm:text-lg font-bold text-slate-900 mb-2">
-                5. Privacy Officer & Inquiries
+                5. Privacy Questions & Inquiries
               </h3>
               <p>
                 For data protection questions or inquiries regarding our open-source client-side privacy architecture, reach us at:
