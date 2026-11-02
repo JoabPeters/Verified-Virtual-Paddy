@@ -53,8 +53,8 @@ export const SITE_CONFIG = {
 
   privacyPrinciples: {
     zeroCostPolicy: "We believe essential civil document assistance should not be locked behind paywalls, high data costs, or recurring fees.",
-    clientSideOnly: "100% of PDF generation is processed in your local device browser using open-source JavaScript. Your personal address, full name, phone number, and meter information are never uploaded to any remote server or stored in persistent browser cookies.",
-    zeroTrackers: "No third-party advertising cookies, behavioural trackers, or surveillance pixels are installed.",
+    clientSideOnly: "The address statement PDF is generated in your browser. The application code does not intentionally save the form fields to an account or application database, and the form data is held in temporary page memory while you use the tool. Your browser and hosting/network providers still process technical connection data when you visit the website. Do not use a shared device for sensitive information, and close the page when finished.",
+    zeroTrackers: "The application does not intentionally install advertising trackers or behavioural analytics. The site may load third-party resources or link to external providers; those providers operate under their own privacy practices. Hosting and network infrastructure may process technical request data such as IP address, browser details and requested files.",
   },
 
   faqs: [
@@ -76,7 +76,7 @@ export const SITE_CONFIG = {
     },
     {
       question: "Where is my personal data stored after I generate a PDF?",
-      answer: "Nowhere. Your data is stored strictly in your device's temporary browser memory (RAM) while you fill the form. The PDF is assembled and downloaded directly onto your phone or computer. The moment you refresh the page or click 'Start Again', all entered data is immediately erased.",
+      answer: "The address statement is generated in your browser and the application does not provide an account or cloud document-storage feature. Form values remain in the active page while you use it and are cleared when you restart or close/reload the page. Your browser, device, downloads folder, extensions, and network/hosting providers may process or retain technical information outside the application's control. Keep your device secure and avoid shared devices for sensitive details.",
     },
     {
       question: "How do I verify the voluntary support account?",
