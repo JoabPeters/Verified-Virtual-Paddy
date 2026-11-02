@@ -117,10 +117,7 @@ export const PrivacyTermsView: React.FC<PrivacyTermsProps> = ({ initialTab = 'te
                 2. User Truthfulness & Criminal Liability for Fraud
               </h3>
               <p>
-                Users agree under solemn affirmation to provide only genuine, factual, and lawful residential information. 
-                Using false names, fictitious addresses, or unauthorized third-party credentials to create documents for fraudulent 
-                financial, bank account opening, or official identity purposes is strictly illegal under Nigerian statutory laws, 
-                including the Cybercrimes (Prohibition, Prevention, etc.) Act and the Criminal Code.
+                Users are responsible for ensuring that information they enter is accurate and that they have permission to use any personal information supplied. Misrepresenting a customer-prepared statement as a utility-issued, government-issued or independently verified document may cause harm and may have legal consequences depending on the circumstances. This platform does not provide legal advice.
               </p>
             </section>
 
@@ -187,7 +184,7 @@ export const PrivacyTermsView: React.FC<PrivacyTermsProps> = ({ initialTab = 'te
             
             <div className="border-b border-gray-200 pb-4">
               <span className="text-xs font-bold text-emerald-800 uppercase tracking-wider">Privacy & Data Architecture</span>
-              <h2 className="text-2xl font-bold text-slate-900 mt-1">Privacy Policy & 7-Day Storage Disclosure</h2>
+              <h2 className="text-2xl font-bold text-slate-900 mt-1">Privacy Policy & Data Handling</h2>
               <p className="text-xs text-slate-500 mt-1">Aligned with Nigeria Data Protection Act (NDPA) Principles</p>
             </div>
 
@@ -195,14 +192,10 @@ export const PrivacyTermsView: React.FC<PrivacyTermsProps> = ({ initialTab = 'te
             <div className="p-5 rounded-lg bg-emerald-50 border border-emerald-200 text-emerald-950">
               <div className="flex items-center gap-2.5 font-bold text-base text-emerald-900 mb-1.5">
                 <CheckCircle2 className="w-5 h-5 text-emerald-700" />
-                <span>Zero-Cloud, Client-Side Architecture (Active Implementation)</span>
+                <span>Browser-Based Document Generation</span>
               </div>
               <p className="text-sm leading-relaxed text-slate-700">
-                Verified Virtual Paddy implements an absolute client-side architecture. 
-                When you enter your name, address, phone number, and meter reference, 
-                <strong className="text-slate-900"> all processing occurs inside your device's browser memory (RAM)</strong>. 
-                Your personal information is NEVER transmitted across the internet to our servers, 
-                never recorded in remote databases, and never persisted to browser cookies or local storage.
+                The Customer-Prepared Address Statement is generated in your browser. The application code does not intentionally send the form fields to an application database or cloud document-storage service. Form values are held in the active page while you use the tool. However, visiting this website involves network requests to its hosting provider, and your browser, device, network provider and any external resources may process technical information. Do not enter information you do not wish to process on your device or share on a network.
               </p>
             </div>
 
@@ -212,43 +205,31 @@ export const PrivacyTermsView: React.FC<PrivacyTermsProps> = ({ initialTab = 'te
               </h3>
               <ul className="list-disc list-inside space-y-2 pl-2 text-slate-700">
                 <li>
-                  <strong className="text-slate-900">Personal Identity Data:</strong> 0% collected on servers. Your name, address, and phone number 
-                  exist only in temporary React component memory on your phone or computer.
+                  <strong className="text-slate-900">Form information:</strong> The application uses the details you enter to prepare the PDF in the active browser session. The application does not provide user accounts or a cloud database for these form submissions.
                 </li>
                 <li>
-                  <strong className="text-slate-900">Browser Storage:</strong> We do NOT write your form data to `localStorage`, `sessionStorage`, or tracking cookies.
+                  <strong className="text-slate-900">Browser storage:</strong> The current form workflow does not intentionally save the entered form fields to localStorage, sessionStorage or application cookies. Your browser, extensions or device settings may behave independently.
                 </li>
                 <li>
                   <strong className="text-slate-900">Generated PDFs:</strong> The document is rendered locally using open-source JavaScript (`jsPDF`) and 
                   downloaded directly onto your device's filesystem.
                 </li>
                 <li>
-                  <strong className="text-slate-900">Telecommunication & Network Logs:</strong> Standard web requests for static JavaScript/CSS assets 
-                  produce ephemeral HTTP server routing logs, but contain no user-entered document text.
+                  <strong className="text-slate-900">Technical connection data:</strong> The hosting provider and network infrastructure may process technical request information such as IP address, browser/user-agent details, timestamps and requested files. We do not control the provider's independent infrastructure logs.
                 </li>
               </ul>
             </section>
 
             <section>
               <h3 className="text-base sm:text-lg font-bold text-slate-900 mb-2">
-                2. Seven-Day Document Storage Policy Disclosure
+                2. Document storage and deletion
               </h3>
               <div className="p-4 rounded-lg bg-slate-50 border border-gray-200 text-xs sm:text-sm text-slate-700 leading-relaxed space-y-2.5">
                 <p>
-                  <strong className="text-slate-900">Honest Architecture Statement:</strong> We do NOT operate a cloud-storage backend or server database for generated files. 
-                  Because no documents are uploaded to our servers, there are zero server-side files to retain or delete. 
-                  Your files remain strictly under your personal control on your own device.
+                  <strong className="text-slate-900">Current service design:</strong> The website does not offer an account-based document vault or cloud backup for generated address statements. The PDF is created in the browser and downloaded by you. Your browser or operating system may retain the downloaded file until you delete it.
                 </p>
                 <p>
-                  <strong className="text-slate-900">Seven-Day Server Retention Policy:</strong> Should a future feature require optional cloud backup or temporary server-side 
-                  link sharing, Verified Virtual Paddy commits strictly to:
-                </p>
-                <ul className="list-disc list-inside space-y-1.5 pl-2 text-slate-700">
-                  <li>Strict end-to-end access controls with private authentication.</li>
-                  <li>An automated hard-expiry timestamp permanently deleting all documents within a maximum of seven (7) days of creation.</li>
-                  <li>Complete automated cryptographic purge of associated metadata upon expiry.</li>
-                  <li>Zero public URL indexing or search engine crawling of private user records.</li>
-                </ul>
+                  <strong className="text-slate-900">Your responsibility:</strong> Save generated files only on a device and in a folder you control. Delete downloaded copies from your device and its recycle bin/trash when they are no longer needed. If cloud storage or account features are introduced later, this policy must be updated before those features launch.
               </div>
             </section>
 
@@ -258,8 +239,7 @@ export const PrivacyTermsView: React.FC<PrivacyTermsProps> = ({ initialTab = 'te
               </h3>
               <p>
                 Under the Nigeria Data Protection Act, you possess the right to privacy, data minimization, and immediate rectification. 
-                Because we store zero personal records on our servers, your personal data is automatically "forgotten" the moment you click 
-                <strong className="text-slate-900"> "Start Again"</strong> or close your browser tab.
+                The application clears the active form state when you use <strong className="text-slate-900">"Start Again"</strong> or reload/close the page. This does not delete files you have downloaded, information retained by your browser or device, or technical records held by hosting and network providers.
               </p>
             </section>
 
@@ -268,8 +248,7 @@ export const PrivacyTermsView: React.FC<PrivacyTermsProps> = ({ initialTab = 'te
                 4. Third-Party Analytics & Advertising Trackers
               </h3>
               <p>
-                We do not embed third-party surveillance scripts, cross-site trackers, or commercial advertising networks. 
-                External links to DisCos and payment applications operate under the independent privacy policies of those respective entities.
+                The current application does not intentionally use advertising or behavioural analytics trackers. The site loads certain third-party resources and links to external electricity providers and payment services. Those third parties may receive technical information when your browser connects to them and operate under their own privacy notices.
               </p>
             </section>
 
