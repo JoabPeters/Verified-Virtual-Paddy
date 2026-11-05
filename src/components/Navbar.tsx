@@ -56,13 +56,13 @@ export const Navbar: React.FC<NavbarProps> = ({ activeView, onNavigate }) => {
           {/* Brand Logo & Name */}
           <button
             onClick={() => handleNavClick('home')}
-            className="flex items-center gap-2.5 text-left group focus:outline-none focus-visible:ring-2 focus-visible:ring-white rounded-lg p-1 -ml-1 transition-all cursor-pointer"
+            className="flex min-w-0 flex-1 items-center gap-2.5 text-left group focus:outline-none focus-visible:ring-2 focus-visible:ring-white rounded-lg p-1 -ml-1 transition-all cursor-pointer"
             aria-label="Verified Virtual Paddy Homepage"
           >
             <img
               src="/vp-logo.svg"
               alt="Verified Virtual Paddy"
-              className="h-10 sm:h-11 w-auto max-w-[min(58vw,230px)] object-contain group-hover:scale-[1.02] transition-transform"
+              className="h-9 sm:h-11 w-auto max-w-[min(38vw,190px)] sm:max-w-[230px] object-contain group-hover:scale-[1.02] transition-transform shrink"
               width="230"
               height="42"
             />
@@ -201,9 +201,9 @@ export const Navbar: React.FC<NavbarProps> = ({ activeView, onNavigate }) => {
           <div className="flex items-center gap-2.5 shrink-0">
             <button
               onClick={() => handleNavClick('address-statement')}
-              className="px-4 sm:px-5 py-2.5 text-xs sm:text-sm font-extrabold text-white bg-[#0D9488] hover:bg-[#0A736A] active:bg-[#085C55] rounded-xl transition-all shadow-md hover:shadow-lg cursor-pointer flex items-center gap-1.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
+              className="px-2.5 sm:px-5 py-2.5 text-[11px] sm:text-sm font-extrabold text-white bg-[#0D9488] hover:bg-[#0A736A] active:bg-[#085C55] rounded-xl transition-all shadow-md hover:shadow-lg cursor-pointer flex items-center gap-1.5 whitespace-nowrap shrink-0 focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
             >
-              <span className="text-white">Get Started — Free</span>
+              <span className="text-white"><span className="sm:hidden">Start</span><span className="hidden sm:inline">Get Started — Free</span></span>
               <ArrowRight className="w-3.5 h-3.5 text-white hidden sm:inline" />
             </button>
 
