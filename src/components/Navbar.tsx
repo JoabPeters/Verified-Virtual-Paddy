@@ -59,38 +59,13 @@ export const Navbar: React.FC<NavbarProps> = ({ activeView, onNavigate }) => {
             className="flex items-center gap-2.5 text-left group focus:outline-none focus-visible:ring-2 focus-visible:ring-white rounded-lg p-1 -ml-1 transition-all cursor-pointer"
             aria-label="Verified Virtual Paddy Homepage"
           >
-            {/* Distinctive Document-and-Checkmark Brand Symbol */}
-            <div className="relative w-10 h-10 rounded-xl bg-gradient-to-br from-slate-800 to-black flex items-center justify-center text-white shadow-sm group-hover:scale-105 transition-transform shrink-0 border border-white/20">
-              {/* Document SVG Outline */}
-              <svg 
-                className="w-5 h-5 text-white" 
-                viewBox="0 0 24 24" 
-                fill="none" 
-                stroke="currentColor" 
-                strokeWidth="2" 
-                strokeLinecap="round" 
-                strokeLinejoin="round"
-                aria-hidden="true"
-              >
-                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                <polyline points="14 2 14 8 20 8"></polyline>
-                <line x1="16" y1="13" x2="8" y2="13"></line>
-                <line x1="16" y1="17" x2="8" y2="17"></line>
-              </svg>
-              {/* Verified Checkmark Badge */}
-              <span className="absolute -bottom-1 -right-1 w-4 h-4 rounded-full bg-[#0D9488] text-white flex items-center justify-center text-[10px] ring-2 ring-black font-bold shadow-xs">
-                ✓
-              </span>
-            </div>
-
-            <div className="flex flex-col">
-              <span className="font-extrabold text-base sm:text-lg tracking-tight text-white group-hover:text-emerald-300 transition-colors leading-tight">
-                {SITE_CONFIG.brand.name}
-              </span>
-              <span className="text-[11px] text-white/90 font-medium hidden sm:block leading-tight">
-                Your Digital Buddy for Document Assistance.
-              </span>
-            </div>
+            <img
+              src="/vp-logo.svg"
+              alt="Verified Virtual Paddy"
+              className="h-10 sm:h-11 w-auto max-w-[min(58vw,230px)] object-contain group-hover:scale-[1.02] transition-transform"
+              width="230"
+              height="42"
+            />
           </button>
 
           {/* Desktop Navigation Links - All Text White */}
