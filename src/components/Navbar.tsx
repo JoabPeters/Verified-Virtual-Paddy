@@ -60,7 +60,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeView, onNavigate }) => {
             aria-label="Verified Virtual Paddy Homepage"
           >
             <img
-              src="/vp-logo.svg"
+              src="/vp-logo.svg?v=4"
               alt="Verified Virtual Paddy"
               className="h-9 sm:h-11 w-auto max-w-[min(38vw,190px)] sm:max-w-[230px] object-contain group-hover:scale-[1.02] transition-transform shrink"
               width="230"
