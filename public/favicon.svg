@@ -1,7 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
   <rect width="64" height="64" rx="14" fill="#111827"/>
-  <path d="M5 12h10l12 32 12-32h11L32 57h-9z" fill="#22c55e"/>
-  <path d="M34 12h12c11 0 17 6 17 16s-6 16-17 16h-5v10H34z" fill="#f8fafc"/>
-  <path d="M41 20v16h5c6 0 9-2 9-8s-3-8-9-8z" fill="#111827"/>
-  <path d="M4 9l6-6h8l-6 6zm10 0l6-6h8l-6 6z" fill="#22c55e"/>
+  <text x="2" y="49" font-family="Arial,Helvetica,sans-serif" font-size="49" font-weight="900" letter-spacing="-6" fill="#22c55e">V</text>
+  <text x="30" y="49" font-family="Arial,Helvetica,sans-serif" font-size="49" font-weight="900" letter-spacing="-4" fill="#ffffff">P</text>
 </svg>
