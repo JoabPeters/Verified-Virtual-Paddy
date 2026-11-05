@@ -230,6 +230,7 @@ export const PrivacyTermsView: React.FC<PrivacyTermsProps> = ({ initialTab = 'te
                 </p>
                 <p>
                   <strong className="text-slate-900">Your responsibility:</strong> Save generated files only on a device and in a folder you control. Delete downloaded copies from your device and its recycle bin/trash when they are no longer needed. If cloud storage or account features are introduced later, this policy must be updated before those features launch.
+                </p>
               </div>
             </section>
 
