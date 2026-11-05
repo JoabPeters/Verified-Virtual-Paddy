@@ -1,16 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 112" role="img" aria-labelledby="title desc">
   <title id="title">Verified Virtual Paddy</title>
-  <desc id="desc">Green V and white P monogram with Verified Virtual Paddy wordmark</desc>
-  <defs>
-    <linearGradient id="green" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#22c55e"/><stop offset="1" stop-color="#087f3d"/></linearGradient>
-  </defs>
-  <g transform="translate(5 7)">
-    <path d="M8 18h19l22 59 22-59h20L58 98H40z" fill="url(#green)"/>
-    <path d="M91 18h35c25 0 39 13 39 34s-14 34-39 34h-15v12H91z" fill="#f8fafc"/>
-    <path d="M111 35v34h14c13 0 20-5 20-17s-7-17-20-17z" fill="#111827"/>
-    <path d="M7 13l9-9h12l-9 9zm15 0l9-9h12l-9 9zm15 0l9-9h12l-9 9z" fill="#22c55e"/>
-  </g>
-  <path d="M180 15v82" stroke="#64748b" stroke-opacity=".55" stroke-width="2"/>
+  <desc id="desc">VP lettermark with Verified Virtual Paddy wordmark</desc>
+  <text x="3" y="88" font-family="Arial,Helvetica,sans-serif" font-size="91" font-weight="900" letter-spacing="-8" fill="#22c55e">V</text>
+  <text x="61" y="88" font-family="Arial,Helvetica,sans-serif" font-size="91" font-weight="900" letter-spacing="-5" fill="#ffffff">P</text>
+  <path d="M7 12l10-9h13l-10 9zm16 0l10-9h13l-10 9z" fill="#22c55e"/>
+  <path d="M178 15v82" stroke="#64748b" stroke-opacity=".65" stroke-width="2"/>
   <text x="205" y="51" font-family="Arial,Helvetica,sans-serif" font-size="34" font-weight="800" fill="#ffffff">Verified</text>
   <text x="205" y="88" font-family="Arial,Helvetica,sans-serif" font-size="34" font-weight="800" fill="#22c55e">Virtual Paddy</text>
 </svg>
