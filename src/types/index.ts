@@ -39,6 +39,7 @@ export interface AddressStatementFormData {
   lga: string;
   electricityProvider: string;
   meterOrAccountNumber: string;
+  statementDate: string;
   agreedToTerms: boolean;
   acknowledgedLimitations: boolean;
 }
