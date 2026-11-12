@@ -86,6 +86,15 @@ export const DocumentPreviewModal: React.FC<DocumentPreviewModalProps> = ({
     year: 'numeric',
   });
 
+  const statementDateString = effectiveAddressData?.statementDate
+    ? (() => {
+        const [year, month, day] = effectiveAddressData.statementDate.split('-').map(Number);
+        return new Date(year, month - 1, day).toLocaleDateString('en-GB', {
+          day: 'numeric', month: 'long', year: 'numeric',
+        });
+      })()
+    : deviceDateString;
+
   const isAddress = documentType === 'address-statement';
   const docTitle = isAddress
     ? 'Customer-Prepared Address Statement'
@@ -237,7 +246,7 @@ export const DocumentPreviewModal: React.FC<DocumentPreviewModalProps> = ({
                 <span className="font-mono text-slate-600">
                   Ref: {isAddress ? 'VVP-CPAS-2026-VERIFIED' : 'VVP-DISCO-2026-INQUIRY'}
                 </span>
-                <span>Date: {deviceDateString}</span>
+                <span>{isAddress ? `Statement Date: ${statementDateString}` : `Date: ${deviceDateString}`}</span>
               </div>
 
               {/* Prominent Statutory Disclaimer Box */}
@@ -331,7 +340,7 @@ export const DocumentPreviewModal: React.FC<DocumentPreviewModalProps> = ({
                       <div className="text-[11px] text-slate-700">
                         Affirmed by: <strong>{effectiveAddressData.fullName || 'User'}</strong>
                       </div>
-                      <div className="text-[10px] text-slate-500">Date: {deviceDateString}</div>
+                      <div className="text-[10px] text-slate-500">Date: {statementDateString}</div>
                     </div>
 
                     <div className="border border-gray-200 p-3 rounded bg-slate-50">
