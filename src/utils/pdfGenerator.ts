@@ -66,6 +66,15 @@ export function generateAddressStatementPdf(formData: AddressStatementFormData):
     minute: '2-digit',
   });
 
+  const statementDateParts = formData.statementDate.split('-').map(Number);
+  const statementDate = formData.statementDate
+    ? new Date(statementDateParts[0], statementDateParts[1] - 1, statementDateParts[2]).toLocaleDateString('en-GB', {
+        day: '2-digit',
+        month: 'long',
+        year: 'numeric',
+      })
+    : formattedDate;
+
   doc.setFont('helvetica', 'normal');
   doc.setFontSize(9);
   doc.setTextColor(71, 85, 105);
@@ -130,6 +139,7 @@ export function generateAddressStatementPdf(formData: AddressStatementFormData):
   y = renderFieldRow('Residential Address:', formData.residentialAddress.trim(), y);
   y = renderFieldRow('Local Government Area (LGA):', formData.lga.trim(), y);
   y = renderFieldRow('State / Territory:', formData.state.trim() + ', Nigeria', y);
+  y = renderFieldRow('Date of Statement:', statementDate, y);
 
   y += 4;
 
@@ -201,7 +211,7 @@ export function generateAddressStatementPdf(formData: AddressStatementFormData):
   doc.setFontSize(8);
   doc.setTextColor(100, 116, 139);
   doc.text(`Affirmed by: ${formData.fullName.trim()}`, margin, signatureBoxY + 21);
-  doc.text(`Date of Execution: ${formattedDate}`, margin, signatureBoxY + 25);
+  doc.text(`Date of Execution: ${statementDate}`, margin, signatureBoxY + 25);
 
   // Column B: Digital Generation Notice
   doc.setFont('helvetica', 'bold');
