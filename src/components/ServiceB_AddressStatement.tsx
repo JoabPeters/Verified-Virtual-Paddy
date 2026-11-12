@@ -18,6 +18,22 @@ interface ServiceBProps {
   onOpenPrivacy?: () => void;
 }
 
+const getTodayDateInputValue = () => {
+  const today = new Date();
+  const year = today.getFullYear();
+  const month = String(today.getMonth() + 1).padStart(2, '0');
+  const day = String(today.getDate()).padStart(2, '0');
+  return `${year}-${month}-${day}`;
+};
+
+const formatStatementDate = (value: string) => {
+  if (!value) return 'Not selected';
+  const [year, month, day] = value.split('-').map(Number);
+  return new Date(year, month - 1, day).toLocaleDateString('en-GB', {
+    day: 'numeric', month: 'long', year: 'numeric',
+  });
+};
+
 const INITIAL_FORM: AddressStatementFormData = {
   fullName: '',
   phoneNumber: '',
@@ -26,6 +42,7 @@ const INITIAL_FORM: AddressStatementFormData = {
   lga: 'Ikeja',
   electricityProvider: 'Ikeja Electric Plc',
   meterOrAccountNumber: '',
+  statementDate: getTodayDateInputValue(),
   agreedToTerms: false,
   acknowledgedLimitations: false,
 };
@@ -194,13 +211,7 @@ export const ServiceB_AddressStatement: React.FC<ServiceBProps> = ({
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const deviceDateString = useMemo(() => {
-    return new Date().toLocaleDateString('en-GB', {
-      day: 'numeric',
-      month: 'long',
-      year: 'numeric',
-    });
-  }, []);
+  const statementDateString = useMemo(() => formatStatementDate(formData.statementDate), [formData.statementDate]);
 
   return (
     <div className="bg-[#F7F9FC] text-[#172B4D] min-h-[85vh] py-8 sm:py-14">
@@ -489,6 +500,22 @@ export const ServiceB_AddressStatement: React.FC<ServiceBProps> = ({
                   </p>
                 </div>
               </div>
+
+              <div className="mt-5">
+                <label htmlFor="statementDate" className="block text-xs font-bold text-[#102A43] mb-1.5">
+                  Date to Show on Statement
+                </label>
+                <input
+                  id="statementDate"
+                  type="date"
+                  value={formData.statementDate}
+                  onChange={(e) => handleFieldChange('statementDate', e.target.value)}
+                  className="w-full sm:max-w-sm px-4 py-3 rounded-xl border border-gray-300 bg-white text-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-[#0D9488]"
+                />
+                <p className="mt-1.5 text-[11px] text-slate-500">
+                  Choose the date you want printed as the statement date. The actual PDF generation timestamp remains separate.
+                </p>
+              </div>
             </div>
 
             {/* Form Actions */}
@@ -585,7 +612,7 @@ export const ServiceB_AddressStatement: React.FC<ServiceBProps> = ({
 
               <div className="p-4 bg-slate-50 flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1">
                 <span className="font-bold text-slate-500 text-xs uppercase tracking-wider">Date of Statement</span>
-                <span className="font-semibold text-slate-700">{deviceDateString}</span>
+                <span className="font-semibold text-slate-700">{statementDateString}</span>
               </div>
             </div>
 
